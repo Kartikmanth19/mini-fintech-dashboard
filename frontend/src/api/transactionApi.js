@@ -1,13 +1,17 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "http://localhost:5000/api/transactions"
+    baseURL: "https://mini-fintech-dashboard-p67c.onrender.com/api/transactions"
 });
 
-export const getTransactions = (params) => API.get("/", { params });
+export const getTransactions = (params) =>
+    API.get("/", { params });
 
-export const addTransaction = (data) => API.post("/", data);
+export const addTransaction = (data) =>
+    API.post("/", data);
 
-export const getSummary = () => API.get("/summary");
+export const getSummary = () =>
+    API.get("/summary");
 
-export const getInsight = () => API.get("/insight");
+export const getInsight = () =>
+    API.get("/insight");
